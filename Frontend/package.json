@@ -1,0 +1,28 @@
+{
+  "name": "f",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tsparticles/engine": "^3.4.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.4.0",
+    "axios": "^1.7.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.10",
+    "mini-svg-data-uri": "^1.4.4",
+    "next": "14.2.4",
+    "next-themes": "^0.3.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "simplex-noise": "^4.0.1",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
+  }
+  
+}
