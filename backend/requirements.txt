@@ -1,0 +1,7 @@
+PyMuPDF
+NLTK
+spacy
+transformers
+scikit-learn
+numpy
+pandas
