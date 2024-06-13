@@ -5,3 +5,4 @@ transformers
 scikit-learn
 numpy
 pandas
+flask
