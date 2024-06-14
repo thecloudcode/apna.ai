@@ -56,6 +56,7 @@ def score_resume(resume_path):
     job_description_paths = ["Data Scientist.txt","Software Engineer.txt", "Frontend Developer.txt", "Full Stack Developer.txt"]
     # job_description_path = job_description_paths
     output = []
+    flag = True
     for job_description_path in job_description_paths:
         with open("Resume Job Des/"+job_description_path, 'r') as f:
             job_description = f.read()
@@ -63,7 +64,9 @@ def score_resume(resume_path):
         resume_texts = []
 
         resume_texts.append(extract_text_from_pdf(resume_path))
-
+        # if flag:
+        #     output.append(resume_texts[0])
+        #     flag = False
         scores = score_resumes(job_description, resume_texts)
 
         for i, score in enumerate(scores):

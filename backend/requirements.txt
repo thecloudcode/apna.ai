@@ -6,3 +6,6 @@ scikit-learn
 numpy
 pandas
 flask
+streamlit
+google-generativeai
+python-dotenv
