@@ -5,6 +5,7 @@ Contributor : Badal Prasad Singh
 This API uses Natural Langauge Processing to check the similarity between two major strings. Inside the project, it is going to be used as Resume and Job Description Similarity Checker
 """
 
+import os
 from flask import Flask, request, jsonify
 import spacy
 
@@ -35,14 +36,15 @@ def similarity():
         w1 = nlp(string1)
         w2 = nlp(string2)
     except Exception as e:
-        return jsonify({"error: Error processing input strings"}), 500
+        return jsonify({"error": "Error processing input strings"}), 500
 
     try:
         similarity_score = w1.similarity(w2)
     except Exception as e:
-        return jsonify({"Error":"Error computing similarity score"}),500
+        return jsonify({"error": "Error computing similarity score"}), 500
 
     return jsonify({'similarity': similarity_score})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))  # Get the port from the environment variable
+    app.run(host='0.0.0.0', port=port, debug=True)
