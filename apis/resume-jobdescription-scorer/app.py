@@ -8,7 +8,7 @@ This API uses Natural Langauge Processing to check the similarity between two ma
 from flask import Flask, request, jsonify
 import spacy
 
-nlp = spacy.load("en_core_web_md")
+nlp = spacy.load("en_core_web_sm")
 
 app = Flask(__name__)
 
