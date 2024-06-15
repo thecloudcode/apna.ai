@@ -21,6 +21,7 @@ supabase: Client = create_client(url, key)
 Example Postman
 
 URL : http://127.0.0.1:5000/add_data_to_applicants_rating_data
+RENDER URL : https://db-crud-nuve.onrender.com/add_data_to_applicants_rating_data
 Method : POST
 Body (JSON)
 {
