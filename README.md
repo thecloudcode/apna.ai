@@ -99,10 +99,12 @@ erDiagram
     "Id": "103"
 }
 ```
+
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `/delete_data_from_applicants_rating_data/<int:Id>`
 - **HTTP Method:** `DELETE`
 
-
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `/update_data_from_applicants_rating_data/<int:Id>`
 - **HTTP Method:** `PUT`
 ```json
@@ -111,6 +113,8 @@ erDiagram
     "Name":"Badal" 
 }
 ```
+
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `/get_data_from_applicants_rating_data`
 - **HTTP Method:** `GET`
 
@@ -124,18 +128,21 @@ erDiagram
     "Job_id": "118"
 }
 ```
+
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `/delete_data_from_current_job_openings/<int:id>`
 - **HTTP Method:** `DELETE`
 
-
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `/update_data_from_current_job_openings/<int:id>`
 - **HTTP Method:** `POST`
 ```json
 {
-    "Name": "Jane Doe"
+    "Job_id":117,
+    "Company": "belikebadal"
 }
 ```
 
-
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `/get_data_from_current_job_openings`
 - **HTTP Method:** `GET`
