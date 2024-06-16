@@ -2,6 +2,22 @@
 
 Welcome to the Apna.ai project! This repository contains multiple APIs designed to streamline various tasks such as resume scoring, job description matching, and database CRUD operations. Below are the details of the available APIs.
 
+## 🏗️ Database Architecture
+
+```mermaid
+erDiagram
+    USERS ||--o{ EMPLOYERS : has
+    USERS ||--o{ JOBSEEKERS : has
+    USERS ||--o{ FACT_TABLE : records
+    EMPLOYERS ||--o{ CURRENT_JOB_OPENINGS : posts
+    JOBSEEKERS ||--o{ APPLICATIONS : applies
+    CURRENT_JOB_OPENINGS ||--o{ APPLICATIONS : receives
+    CURRENT_JOB_OPENINGS ||--o{ FACT_TABLE : records
+    APPLICATIONS ||--o{ FACT_TABLE : contains
+    JOBSEEKERS ||--o{ FACT_TABLE : recorded_in
+    APPLICATIONS_RATING_DATA
+```
+
 ## APIs Overview
 
 ### Badal
