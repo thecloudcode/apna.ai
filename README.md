@@ -18,13 +18,19 @@ Apna.ai is an ongoing project aimed at revolutionizing the job search experience
    
    Description: Upload your resume and discover your ranking among other applicants for the job.
 
-3. **Resume-AI**  🤖 [Resume-AI](https://chatwithresume.streamlit.app/)  
-   Authors: Badal and Yashwanth
+2. **Resume-AI**  🤖 [Resume-AI](https://chatwithresume.streamlit.app/)  
+   Authors: Badal & Yashwanth
    
    Description: Upload your resume and receive AI-generated recommendations and answers to your queries.
 
-4. **Chatbot (under construction)**  🤖 [Chatbot](https://chatbot-lac-ten.vercel.app/)  
-   Author: Keerthi
+3. **Chatbot (under construction)**  🤖 [Chatbot](https://chatbot-lac-ten.vercel.app/)  
+   Author: Keerthi & Badal
+   
+   Description: An interactive chatbot to provide updates on job trends, markets, and other relevant information.
+
+4. **ATS+AI (under construction)**  🤖 Coming Soon
+
+   Author: Akshaya & Badal
    
    Description: An interactive chatbot to provide updates on job trends, markets, and other relevant information.
 
