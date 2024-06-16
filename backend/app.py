@@ -10,6 +10,7 @@ from werkzeug.utils import secure_filename
 from score import score_resume, extract_text_from_pdf
 import os
 from flask_cors import CORS
+from rankings import result
 
 app = Flask(__name__)
 CORS(app)

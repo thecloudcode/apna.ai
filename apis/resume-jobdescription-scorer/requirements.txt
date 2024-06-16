@@ -1,2 +1,5 @@
 spacy
 flask
+fastapi
+uvicorn
+python-dotenv
