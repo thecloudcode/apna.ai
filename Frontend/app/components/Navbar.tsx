@@ -1,32 +1,120 @@
-import Link from "next/link"
-import Image from "next/image"
-import DesktopLogo from '../../public/apna-logo.png'
-import AI from '../../public/ai-generate.png'
-import { UserNav } from "./UserNav"
+"use client";
 
-export function Navbar() {
-    return(
-        <nav className="w-full border-b">
-            <div className="flex items-center justify-between container mx-auto px-5 lg:px-10 py-5">
-                <Link href="/">
-                    <Image src={DesktopLogo}
-                    alt="Desktop Logo"
-                    className="w-[70px] hidden lg:block"
-                />
-                    {/* <Image src={MobileLogo} */}
-                    {/* alt="Mobile Logo" */}
-                    {/* className="block lg:hidden w-32" */}
-                    {/* /> */}
+import { type Session } from "lucia";
+import { MenuIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import LogoutButton from "./shared/logout-button";
+import { buttonVariants } from "./ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { cn } from "./lib/utils";
+export default function Navbar({
+  session,
+  headerText,
+}: {
+  session: Session;
+  headerText: {
+    changelog: string;
+    about: string;
+    login: string;
+    dashboard: string;
+    [key: string]: string;
+  };
+}) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  return (
+    <nav className="flex h-full items-center justify-between">
+      <Link href="/" className="flex items-center text-2xl font-bold">
+        <Image
+          src="/chad-next.png"
+          alt="ChadNext logo"
+          width="30"
+          height="30"
+          className="mr-2 rounded-sm object-contain"
+        />
+        <p>ChadNext</p>
+      </Link>
+      <div className="hidden items-center gap-12 lg:flex 2xl:gap-16">
+        <div className="space-x-4 text-center text-sm leading-loose text-muted-foreground md:text-left">
+          <Link
+            href="/changelog"
+            className="font-semibold hover:underline hover:underline-offset-4"
+          >
+            {headerText.changelog}
+          </Link>
+          <Link
+            href="/about"
+            className="font-semibold hover:underline hover:underline-offset-4"
+          >
+            {headerText.about}
+          </Link>
+        </div>
+        <div className="flex items-center gap-x-2">
+          {session ? (
+            <Link
+              href="/dashboard"
+              className={cn(
+                buttonVariants({ variant: "outline" }),
+                "bg-secondary"
+              )}
+              onClick={() => setIsModalOpen(false)}
+            >
+              {headerText.dashboard}
+            </Link>
+          ) : (
+            <Link href="/login" className={buttonVariants()}>
+              {headerText.login}
+            </Link>
+          )}
+        </div>
+      </div>
+      <Sheet open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <SheetTrigger className="lg:hidden">
+          <span className="sr-only">Open Menu</span>
+          <MenuIcon />
+        </SheetTrigger>
+        <SheetContent>
+          <div className="flex flex-col items-center space-y-10 py-10">
+            <div className="space-y-4 text-center text-sm leading-loose text-muted-foreground">
+              <Link
+                href="/changelog"
+                className="block font-semibold hover:underline hover:underline-offset-4"
+                onClick={() => setIsModalOpen(false)}
+              >
+                {headerText.changelog}
+              </Link>
+              <Link
+                href="/about"
+                className="block font-semibold hover:underline hover:underline-offset-4"
+                onClick={() => setIsModalOpen(false)}
+              >
+                {headerText.about}
+              </Link>
+              {session ? (
+                <>
+                  <Link
+                    href="/dashboard"
+                    className="block font-semibold hover:underline hover:underline-offset-4"
+                    onClick={() => setIsModalOpen(false)}
+                  >
+                    {headerText.dashboard}
+                  </Link>
+                  <LogoutButton className=" !mt-20" />
+                </>
+              ) : (
+                <Link
+                  href="/login"
+                  className={buttonVariants()}
+                  onClick={() => setIsModalOpen(false)}
+                >
+                  {headerText.login}
                 </Link>
-                <div className="flex justify-end rounded-full items-center border px-5 py-2 w-[50%]">
-                    <p>Let <b>AI</b> Search you a Job </p>
-                    <Image src={AI}
-                    alt="AI"
-                    className="mx-2 w-7"
-                    />
-                </div>
-                <UserNav />
+              )}
             </div>
-        </nav>
-    )
+          </div>
+        </SheetContent>
+      </Sheet>
+    </nav>
+  );
 }
