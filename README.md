@@ -23,7 +23,7 @@ Apna.ai is an ongoing project aimed at revolutionizing the job search experience
    
    Description: Upload your resume and receive AI-generated recommendations and answers to your queries.
 
-4. **Chatbot (under construction)**  🤖 [Chatbot](https://chatbot-44n9i4w5o-thecloudcodes-projects.vercel.app/)  
+4. **Chatbot (under construction)**  🤖 [Chatbot](https://chatbot-lac-ten.vercel.app/)  
    Author: Keerthi
    
    Description: An interactive chatbot to provide updates on job trends, markets, and other relevant information.
