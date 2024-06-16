@@ -62,7 +62,6 @@ erDiagram
 ```json
 {
     "Id": "103"
-    // other attributes are ignored for simplicity example
 }
 ```
 - **Endpoint:** `/delete_data_from_applicants_rating_data`
@@ -74,7 +73,6 @@ erDiagram
 ```json
 {
     "103": 7.7
-    // other attributes are ignored for simplicity example
 }
 ```
 - **Endpoint:** `/get_data_from_applicants_rating_data`
@@ -87,7 +85,6 @@ erDiagram
 ```json
 {
     "Job_id": "118"
-    // other attributes are ignored for simplicity example
 }
 ```
 - **Endpoint:** `/delete_data_from_current_job_openings/<int:id>`
@@ -99,7 +96,6 @@ erDiagram
 ```json
 {
     "Name": "Jane Doe"
-    // other attributes are ignored for simplicity example
 }
 ```
 
