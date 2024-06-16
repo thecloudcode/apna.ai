@@ -107,7 +107,8 @@ erDiagram
 - **HTTP Method:** `PUT`
 ```json
 {
-    "103": 7.7
+    "Id":1001,
+    "Name":"Badal" 
 }
 ```
 - **Endpoint:** `/get_data_from_applicants_rating_data`
