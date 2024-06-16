@@ -9,3 +9,6 @@ flask
 streamlit
 google-generativeai
 python-dotenv
+fastapi
+uvicorn
+python-multipart
