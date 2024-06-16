@@ -1,6 +1,34 @@
-# Apna.ai
+# <p align="center">apna.ai 🤖</p>
 
-Welcome to the Apna.ai project! This repository contains multiple APIs designed to streamline various tasks such as resume scoring, job description matching, and database CRUD operations. Below are the details of the available APIs.
+<h3 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;It's+a+Hiring+Website....;Integrated+with+AI+🎉+!&center=true&size=30">
+  </a>
+</h3>
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
+
+### Project Overview
+
+Apna.ai is an ongoing project aimed at revolutionizing the job search experience with cutting-edge AI tools.
+
+### Key Features (Temp UIs for Phase 1)
+
+1. **Resume Ranker**  🚀 [Resume Ranker](https://badal-resume-ranker.streamlit.app/)  
+   Author: Badal
+   
+   Description: Upload your resume and discover your ranking among other applicants for the job.
+
+3. **Resume-AI**  🤖 [Resume-AI](https://chatwithresume.streamlit.app/)  
+   Authors: Badal and Yashwanth
+   
+   Description: Upload your resume and receive AI-generated recommendations and answers to your queries.
+
+4. **Chatbot (under construction)**  🤖 [Chatbot](https://chatbot-44n9i4w5o-thecloudcodes-projects.vercel.app/)  
+   Author: Keerthi
+   
+   Description: An interactive chatbot to provide updates on job trends, markets, and other relevant information.
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 
 ## 🏗️ Database Architecture
 
@@ -17,6 +45,7 @@ erDiagram
     JOBSEEKERS ||--o{ FACT_TABLE : recorded_in
     APPLICANTS_RATING_DATA
 ```
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 
 # 🌐 APIs
 
