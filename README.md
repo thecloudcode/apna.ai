@@ -15,7 +15,7 @@ erDiagram
     CURRENT_JOB_OPENINGS ||--o{ FACT_TABLE : records
     APPLICATIONS ||--o{ FACT_TABLE : contains
     JOBSEEKERS ||--o{ FACT_TABLE : recorded_in
-    APPLICATIONS_RATING_DATA
+    APPLICANTS_RATING_DATA
 ```
 
 ## APIs Overview
