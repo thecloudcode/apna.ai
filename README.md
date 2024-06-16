@@ -2,42 +2,104 @@
 
 Welcome to the Apna.ai project! This repository contains multiple APIs designed to streamline various tasks such as resume scoring, job description matching, and database CRUD operations. Below are the details of the available APIs.
 
-## APIs Overview
+## 🏗️ Database Architecture
 
-### Badal
+```mermaid
+erDiagram
+    USERS ||--o{ EMPLOYERS : has
+    USERS ||--o{ JOBSEEKERS : has
+    USERS ||--o{ FACT_TABLE : records
+    EMPLOYERS ||--o{ CURRENT_JOB_OPENINGS : posts
+    JOBSEEKERS ||--o{ APPLICATIONS : applies
+    CURRENT_JOB_OPENINGS ||--o{ APPLICATIONS : receives
+    CURRENT_JOB_OPENINGS ||--o{ FACT_TABLE : records
+    APPLICATIONS ||--o{ FACT_TABLE : contains
+    JOBSEEKERS ||--o{ FACT_TABLE : recorded_in
+    APPLICANTS_RATING_DATA
+```
 
-**Resume Scorer**
+# 🌐 APIs
 
-- **URL**: [https://resume-scorer.onrender.com](https://resume-scorer.onrender.com)
-- **Description**: This API takes the resume score, and returns the rank of the resume among all resumes filled in each job application.
+### ✨ Custom Gemini Response
 
-### Keerthi
+**Base URL:** [https://gogemini.onrender.com](https://gogemini.onrender.com)
+- **Endpoint:** `/generate`
+- **HTTP Method:** `POST`
+```json
+{
+    "prompt": "I am Badal"
+}
+```
 
-**Gemini Response**
+### 📈 Resume Rank Calculator
 
-- **URL**: [https://gemini-response.onrender.com](https://gemini-response.onrender.com)
-- **Description**: This API provides a response from Gemini on being asked any question regarding hiring, recruitment or placements.
+**Base URL:** [https://resume-scorer-fastapi.onrender.com](https://resume-scorer-fastapi.onrender.com)
+- **Endpoint:** `/rank`
+- **HTTP Method:** `POST`
+```json
+{
+    "score": "7.7"
+}
+```
 
-### Yashwanth
+### 📝 Resume - Job Description Scorer
 
-**Resume and Job Description Matcher**
+**Base URL:** [https://resume-jobdes-scorer.onrender.com](https://resume-scorer-fastapi.onrender.com)
+- **Endpoint:** `/similarity`
+- **HTTP Method:** `POST`
+```json
+{
+    "string1": "Help me out",
+    "string2": "Please, help me out"
+}
+```
 
-- **URL**: [https://resume-jobdescription-scorer.onrender.com](https://resume-jobdescription-scorer.onrender.com)
-- **Description**: This API scores and matches a resume with the job description provided by the job description using NLP
+### ⚡ Quick Actions on Applicants Rating Data
 
-### Akshaya
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
+- **Endpoint:** `/add_data_to_applicants_rating_data`
+- **HTTP Method:** `POST`
+```json
+{
+    "Id": "103"
+}
+```
+- **Endpoint:** `/delete_data_from_applicants_rating_data`
+- **HTTP Method:** `DELETE`
 
-**Database CRUD Operations**
 
-- **URL**: [https://db-crud-nuve.onrender.com](https://db-crud-nuve.onrender.com)
-- **Description**: This API performs Create, Read, Update, and Delete operations on a Supabase database, enabling efficient data management.
+- **Endpoint:** `update_data_from_applicants_rating_data/<int:Id>`
+- **HTTP Method:** `PUT`
+```json
+{
+    "103": 7.7
+}
+```
+- **Endpoint:** `/get_data_from_applicants_rating_data`
+- **HTTP Method:** `GET`
 
-## Contributors
+### 🚀 Quick Actions on Current Job Openings Data
 
-### Bindu Vamsi
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
+- **Endpoint:** `add_data_to_current_job_openings`
+- **HTTP Method:** `POST`
+```json
+{
+    "Job_id": "118"
+}
+```
+- **Endpoint:** `/delete_data_from_current_job_openings/<int:id>`
+- **HTTP Method:** `DELETE`
 
-Bindu Vamsi is a core contributor to the Apna.ai project, ensuring the development and maintenance of high-quality APIs.
 
----
+- **Endpoint:** `/update_data_from_current_job_openings/<int:id>`
+- **HTTP Method:** `POST`
+```json
+{
+    "Name": "Jane Doe"
+}
+```
 
-Feel free to reach out if you have any questions or need further assistance with these APIs.
+
+- **Endpoint:** `/get_data_from_current_job_openings`
+- **HTTP Method:** `GET`
