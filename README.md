@@ -80,6 +80,7 @@ erDiagram
 
 ### 🚀 Quick Actions on Current Job Openings Data
 
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `add_data_to_current_job_openings`
 - **HTTP Method:** `POST`
 ```json
