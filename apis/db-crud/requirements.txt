@@ -1,3 +1,5 @@
 Flask
 supabase
 python-dotenv
+fastapi
+uvicorn
