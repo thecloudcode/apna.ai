@@ -99,11 +99,11 @@ erDiagram
     "Id": "103"
 }
 ```
-- **Endpoint:** `/delete_data_from_applicants_rating_data`
+- **Endpoint:** `/delete_data_from_applicants_rating_data/<int:Id>`
 - **HTTP Method:** `DELETE`
 
 
-- **Endpoint:** `update_data_from_applicants_rating_data/<int:Id>`
+- **Endpoint:** `/update_data_from_applicants_rating_data/<int:Id>`
 - **HTTP Method:** `PUT`
 ```json
 {
@@ -116,7 +116,7 @@ erDiagram
 ### 🚀 Quick Actions on Current Job Openings Data
 
 **Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
-- **Endpoint:** `add_data_to_current_job_openings`
+- **Endpoint:** `/add_data_to_current_job_openings`
 - **HTTP Method:** `POST`
 ```json
 {
