@@ -1,6 +1,8 @@
 # 🌐 apna.ai Database Architecture
 
-Welcome to the Job Seeking Website project! This README provides an overview of the database architecture, including the tables, their relationships, and an illustration of the schema.
+Welcome! This README provides an overview of the database architecture, including the tables, their relationships, and an illustration of the schema.
+
+![Screenshot 2024-06-16 194616](https://github.com/thecloudcode/apna.ai/assets/114615639/39650015-8778-4efb-906a-49e0f8a83c47)
 
 ## 🗂️ Tables Overview
 
