@@ -1,6 +1,40 @@
-# Apna.ai
+# <p align="center">apna.ai 🤖</p>
 
-Welcome to the Apna.ai project! This repository contains multiple APIs designed to streamline various tasks such as resume scoring, job description matching, and database CRUD operations. Below are the details of the available APIs.
+<h3 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;It's+a+Hiring+Website....;Integrated+with+AI+🎉+!&center=true&size=30">
+  </a>
+</h3>
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
+
+### Project Overview
+
+Apna.ai is an ongoing project aimed at revolutionizing the job search experience with cutting-edge AI tools.
+
+### Key Features (Temp UIs for Phase 1)
+
+1. **Resume Ranker**  🚀 [Resume Ranker](https://badal-resume-ranker.streamlit.app/)  
+   Author: Badal
+   
+   Description: Upload your resume and discover your ranking among other applicants for the job.
+
+2. **Resume-AI**  🤖 [Resume-AI](https://chatwithresume.streamlit.app/)  
+   Authors: Badal & Yashwanth
+   
+   Description: Upload your resume and receive AI-generated recommendations and answers to your queries.
+
+3. **Chatbot (under construction)**  🤖 [Chatbot](https://chatbot-lac-ten.vercel.app/)  
+   Author: Keerthi & Badal
+   
+   Description: An interactive chatbot to provide updates on job trends, markets, and other relevant information.
+
+4. **ATS+AI (under construction)**  🤖 Coming Soon
+
+   Author: Akshaya & Badal
+   
+   Description: An interactive chatbot to provide updates on job trends, markets, and other relevant information.
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 
 ## 🏗️ Database Architecture
 
@@ -17,6 +51,7 @@ erDiagram
     JOBSEEKERS ||--o{ FACT_TABLE : recorded_in
     APPLICANTS_RATING_DATA
 ```
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 
 # 🌐 APIs
 
@@ -64,42 +99,50 @@ erDiagram
     "Id": "103"
 }
 ```
-- **Endpoint:** `/delete_data_from_applicants_rating_data`
+
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
+- **Endpoint:** `/delete_data_from_applicants_rating_data/<int:Id>`
 - **HTTP Method:** `DELETE`
 
-
-- **Endpoint:** `update_data_from_applicants_rating_data/<int:Id>`
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
+- **Endpoint:** `/update_data_from_applicants_rating_data/<int:Id>`
 - **HTTP Method:** `PUT`
 ```json
 {
-    "103": 7.7
+    "Id":1001,
+    "Name":"Badal" 
 }
 ```
+
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `/get_data_from_applicants_rating_data`
 - **HTTP Method:** `GET`
 
 ### 🚀 Quick Actions on Current Job Openings Data
 
 **Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
-- **Endpoint:** `add_data_to_current_job_openings`
+- **Endpoint:** `/add_data_to_current_job_openings`
 - **HTTP Method:** `POST`
 ```json
 {
     "Job_id": "118"
 }
 ```
+
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `/delete_data_from_current_job_openings/<int:id>`
 - **HTTP Method:** `DELETE`
 
-
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `/update_data_from_current_job_openings/<int:id>`
 - **HTTP Method:** `POST`
 ```json
 {
-    "Name": "Jane Doe"
+    "Job_id":117,
+    "Company": "belikebadal"
 }
 ```
 
-
+**Base URL:** [https://db-crud-fastapi.onrender.com](https://db-crud-fastapi.onrender.com)
 - **Endpoint:** `/get_data_from_current_job_openings`
 - **HTTP Method:** `GET`
