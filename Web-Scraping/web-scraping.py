@@ -37,7 +37,6 @@ def scrape_github_profile(url):
     try:
         soup = BeautifulSoup(page.text, 'html.parser')
 
-        # Extracting GitHub profile metrics
         repos_element = soup.find('span', class_='Counter')
         repos = repos_element.text.strip() if repos_element else 'N/A'
 
@@ -57,7 +56,7 @@ def scrape_github_profile(url):
         raise Exception(f"Failed to parse the webpage content. Error: {e}")
 
 def scrape_linkedin_profile(url):
-    # Implement LinkedIn profile scraping logic here
+    
     try:
         page = requests.get(url)
         page.raise_for_status()
@@ -68,7 +67,7 @@ def scrape_linkedin_profile(url):
     try:
         soup = BeautifulSoup(page.text, 'html.parser')
 
-        # Example: Extracting LinkedIn profile metrics (connections, activities, etc.)
+       
         connections_element = soup.find('span', class_='t-bold')
         connections = connections_element.text.strip() if connections_element else 'N/A'
 
@@ -84,7 +83,7 @@ def scrape_linkedin_profile(url):
         raise Exception(f"Failed to parse the webpage content. Error: {e}")
 
 def compute_score(profile_data):
-    # Example scoring logic: Sum up available metrics
+    
     score = 0
     if 'repositories' in profile_data and profile_data['repositories'] != 'N/A':
         score += 1
@@ -107,7 +106,7 @@ def generate_response():
 
         logging.debug(f"Received profile URL: {profile_url}")
 
-        # Determine the platform and scrape the profile data accordingly
+        
         if 'github.com' in profile_url:
             profile_data = scrape_github_profile(profile_url)
         elif 'linkedin.com' in profile_url:
@@ -117,10 +116,10 @@ def generate_response():
 
         logging.debug(f"Scraped profile data: {profile_data}")
 
-        # Compute profile score based on available data
+        
         profile_score = compute_score(profile_data)
 
-        # Generate the response using generative model
+        
         prompt = f"Profile analysis: {profile_data}. Profile score: {profile_score}"
         response = model.generate_content([prompt])
         logging.debug(f"Generated response: {response}")
