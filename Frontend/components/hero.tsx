@@ -78,6 +78,7 @@ const hero = () => {
             <a href='https://chatbot-lac-ten.vercel.app/'>
                 <Magicbutton title="Chatbot"/>
             </a>
+
             </div>
         </div>
         
