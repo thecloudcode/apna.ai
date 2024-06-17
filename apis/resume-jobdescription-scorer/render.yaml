@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: flask-api
-    env: python
-    region: oregon
-    buildCommand: pip install -r requirements.txt && python -m spacy download en_core_web_sm
-    startCommand: python app.py
-    plan: starter
