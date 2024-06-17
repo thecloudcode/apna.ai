@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "./components/Navbar";
+import { ThemeProvider } from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "apnaai",
-  description: "Job posting ai website",
+  title: "apna.ai",
+  description: "An AI-Integrated Hiring Website",
 };
 
 export default function RootLayout({
@@ -17,12 +17,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
       <body className={inter.className}>
-        <Navbar/>
-        {children}
-        
-        </body>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+      </body>
     </html>
   );
 }

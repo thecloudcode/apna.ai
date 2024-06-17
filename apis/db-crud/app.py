@@ -26,7 +26,6 @@ Method : POST
 Body (JSON)
 {
     "Id": "103",
-    "Name": "Data Engineer"
 }
 """
 @app.route('/add_data_to_applicants_rating_data', methods=['POST'])

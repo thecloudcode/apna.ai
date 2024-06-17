@@ -18,7 +18,7 @@ def extract_text_from_pdf(path):
         text += page.get_text()
     return text
 
-text = extract_text_from_pdf("Datasets/Resume1.pdf")
+# text = extract_text_from_pdf("Datasets/Resume1.pdf")
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -27,7 +27,7 @@ def preprocess_text(text):
     tokens = [token.lemma_ for token in doc if not token.is_stop and not token.is_punct]
     return " ".join(tokens)
 
-text_preprocessed = preprocess_text(text)
+# text_preprocessed = preprocess_text(text)
 
 def vectorize_text(texts):
     vectorizer = TfidfVectorizer()

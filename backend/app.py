@@ -11,11 +11,27 @@ from score import score_resume, extract_text_from_pdf
 import os
 from flask_cors import CORS
 from rankings import result
+from Database.users import users_bp
+from Database.employers import employers_bp
+from Database.jobseekers import jobseekers_bp
+from Database.applications import applications_bp
+from Database.current_job_openings import current_job_openings_bp
+from Database.fact_table import fact_table_bp
+from Database.applicants_rating_data import applicants_rating_data_bp
+
 
 app = Flask(__name__)
 CORS(app)
 app.config['UPLOAD_FOLDER'] = './uploads'
 app.config['ALLOWED_EXTENSIONS'] = {'pdf'}
+
+app.register_blueprint(users_bp)
+app.register_blueprint(employers_bp)
+app.register_blueprint(jobseekers_bp)
+app.register_blueprint(applications_bp)
+app.register_blueprint(current_job_openings_bp)
+app.register_blueprint(fact_table_bp)
+app.register_blueprint(applicants_rating_data_bp)
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']

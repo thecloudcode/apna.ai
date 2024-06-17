@@ -1,14 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        remotePatterns: [
-            {
-                hostname: "a0.muscache.com",
-                protocol : "https",
-                port: "",
-            },
-        ],
+      domains: ['avatars.githubusercontent.com', 'media.licdn.com/'],
     },
-};
-
-export default nextConfig;
+  };
+  
+  export default nextConfig;
+  
