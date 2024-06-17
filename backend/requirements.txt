@@ -13,3 +13,4 @@ fastapi
 uvicorn
 python-multipart
 supabase
+Flask-Cors
