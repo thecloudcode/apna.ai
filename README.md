@@ -4,9 +4,7 @@
   </a>
 </h3>
 
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
-
-<p align="center" style="font-size:27px; font-weight:bold;">apna.ai 🤖</p>
+## <p align="center" style="font-size:27px; font-weight:bold;">apna.ai 🤖</p>
 
 
 <p align="center" >
@@ -23,6 +21,8 @@
   <a href="#database-architecture" style="font-size:17px; font-weight:bold;">View Database Schema</a>
 </p>
 <br>
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 
 ## Project Overview
 ![Screenshot 2024-06-18 112618](https://github.com/thecloudcode/apna.ai/assets/114615639/9d86801c-3b2a-4343-b9e3-b71f0e901cdd)
