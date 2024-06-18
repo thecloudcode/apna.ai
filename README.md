@@ -1,4 +1,3 @@
-
 <h3 align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;It's+a+Hiring+Website....;Integrated+with+AI+🎉+!&center=true&size=30">
@@ -26,6 +25,8 @@
 <br>
 
 ## Project Overview
+![Screenshot 2024-06-18 112618](https://github.com/thecloudcode/apna.ai/assets/114615639/9d86801c-3b2a-4343-b9e3-b71f0e901cdd)
+
 
 Apna.ai is an ongoing project aimed at revolutionizing the job search & hiring experience with cutting-edge AI technologies.
 
@@ -67,8 +68,14 @@ erDiagram
     CURRENT_JOB_OPENINGS ||--o{ FACT_TABLE : records
     APPLICATIONS ||--o{ FACT_TABLE : contains
     JOBSEEKERS ||--o{ FACT_TABLE : recorded_in
-    APPLICANTS_RATING_DATA
+    FACT_TABLE ||--o{ APPLICANTS_RATING_DATA : rates
 ```
+
+
+
+![Screenshot 2024-06-16 194616](https://github.com/thecloudcode/apna.ai/assets/114615639/6b712704-0e30-4fdf-94a1-0d230a2fc1d2)
+
+
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 
 <!-- # Backend
