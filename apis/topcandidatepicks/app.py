@@ -19,7 +19,7 @@ def get_appslicants(id, numofcandidates):
         url2 = "https://apna-ai-wsfp.onrender.com/getusers"
         response = requests.get(url2)
         users = response.json()
-        
+
         res = {}
 
 

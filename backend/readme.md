@@ -1,5 +1,10 @@
 # What's happening here?
 
+<<<<<<< HEAD
+=======
+Hosted : https://apna-ai-wsfp.onrender.com
+
+>>>>>>> 19c09e64ceda5a78df2765b4624657717919dbc5
 ### Chat with your Resume
 #### Author : Yashwanth
 This is the backend for Resume AI where the `app.py` file uses PyPDF2 to extract the text data from the pdf, Google Gemini API Model to interact with the user, given the context of the Resume. Moreover, it uses LangChain to create an end-to-end pipeline for smooth processing of the model.
@@ -56,4 +61,8 @@ Temporary file to check the Resume-Job desc score
 
 ### score.py
 
+<<<<<<< HEAD
 Finds out the score, this file exists to keep the idea of calculate the score using the previous concept where the score by `TF-IDF approach and cosine similarity`, which was later replaced by `NLP` 
+=======
+Finds out the score, this file exists to keep the idea of calculate the score using the previous concept where the score by `TF-IDF approach and cosine similarity`, which was later replaced by `NLP` 
+>>>>>>> 19c09e64ceda5a78df2765b4624657717919dbc5

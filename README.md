@@ -4,9 +4,23 @@
   </a>
 </h3>
 
+<<<<<<< HEAD
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 
 <p align="center" style="font-size:27px; font-weight:bold;">apna.ai 🤖</p>
+
+
+<p align="center" >
+  <a href="https://apnaai-thecloudcodes-projects.vercel.app/" style="font-size:17px; font-weight:bold;">Visit Website</a>
+</p>
+<!-- <p align="center">
+  <a href="https://apna-ai-wsfp.onrender.com/" style="font-size:17px; font-weight:bold;">Visit Backend Server (No Home Page)</a>
+</p> -->
+<p align="center">
+  <a href="#backend-and-apis" style="font-size:17px; font-weight:bold;">Visit Backend & APIs</a>
+</p>
+=======
+## <p align="center" style="font-size:27px; font-weight:bold;">apna.ai 🤖</p>
 
 
 <p align="center" >
@@ -24,8 +38,22 @@
 </p>
 <br>
 
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
+
+## Project Overview
+![Screenshot 2024-06-18 112618](https://github.com/thecloudcode/apna.ai/assets/114615639/9d86801c-3b2a-4343-b9e3-b71f0e901cdd)
+>>>>>>> 19c09e64ceda5a78df2765b4624657717919dbc5
+
+<p align="center">
+  <a href="#database-architecture" style="font-size:17px; font-weight:bold;">View Database Schema</a>
+</p>
+<br>
+
+<<<<<<< HEAD
 ## Project Overview
 
+=======
+>>>>>>> 19c09e64ceda5a78df2765b4624657717919dbc5
 Apna.ai is an ongoing project aimed at revolutionizing the job search & hiring experience with cutting-edge AI technologies.
 
 ### Key Features (Temp UIs for Phase 1)
@@ -54,11 +82,34 @@ Apna.ai is an ongoing project aimed at revolutionizing the job search & hiring e
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 
 ## Database Architecture
+<<<<<<< HEAD
 
 
 
 
 
+=======
+
+```mermaid
+erDiagram
+    USERS ||--o{ EMPLOYERS : has
+    USERS ||--o{ JOBSEEKERS : has
+    USERS ||--o{ FACT_TABLE : records
+    EMPLOYERS ||--o{ CURRENT_JOB_OPENINGS : posts
+    JOBSEEKERS ||--o{ APPLICATIONS : applies
+    CURRENT_JOB_OPENINGS ||--o{ APPLICATIONS : receives
+    CURRENT_JOB_OPENINGS ||--o{ FACT_TABLE : records
+    APPLICATIONS ||--o{ FACT_TABLE : contains
+    JOBSEEKERS ||--o{ FACT_TABLE : recorded_in
+    FACT_TABLE ||--o{ APPLICANTS_RATING_DATA : rates
+```
+
+
+
+![Screenshot 2024-06-16 194616](https://github.com/thecloudcode/apna.ai/assets/114615639/6b712704-0e30-4fdf-94a1-0d230a2fc1d2)
+
+
+>>>>>>> 19c09e64ceda5a78df2765b4624657717919dbc5
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 
 <!-- # Backend

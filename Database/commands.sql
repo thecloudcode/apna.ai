@@ -70,3 +70,50 @@ CREATE TABLE Applicants_Rating_Data (
     "116" FLOAT,
     "117" FLOAT,
 );
+
+-- CREATE TABLE Internships (
+--     Job_id INT PRIMARY KEY,
+--     Duration VARCHAR(50) NOT NULL,
+--     Stipend DECIMAL(10, 2),
+--     Mentor VARCHAR(100),
+--     Skills_Required TEXT,
+--     FOREIGN KEY (Job_id) REFERENCES Current_Job_Openings(Job_id)
+-- );
+
+CREATE TABLE Internships (
+    Internship_id SERIAL PRIMARY KEY,
+    Job_id INT NOT NULL,
+    Duration VARCHAR(50) NOT NULL,
+    Stipend DECIMAL(10, 2),
+    Start_Date DATE,
+    End_Date DATE,
+    FOREIGN KEY (Job_id) REFERENCES Current_Job_Openings(Job_id)
+);
+
+CREATE TABLE FulltimeJobs (
+    FulltimeJob_id SERIAL PRIMARY KEY,
+    Job_id INT NOT NULL,
+    Experience_Required VARCHAR(100),
+    Benefits TEXT,
+    Start_Date DATE,
+    FOREIGN KEY (Job_id) REFERENCES Current_Job_Openings(Job_id)
+);
+
+CREATE TABLE ParttimeJobs (
+    ParttimeJob_id SERIAL PRIMARY KEY,
+    Job_id INT NOT NULL,
+    Hours_Per_Week INT NOT NULL,
+    Hourly_Rate DECIMAL(10, 2),
+    Schedule VARCHAR(100),
+    FOREIGN KEY (Job_id) REFERENCES Current_Job_Openings(Job_id)
+);
+
+CREATE TABLE Freelancing (
+    Freelancing_id SERIAL PRIMARY KEY,
+    Job_id INT NOT NULL,
+    Project_Budget DECIMAL(10, 2),
+    Deadline DATE,
+    Required_Skills TEXT,
+    FOREIGN KEY (Job_id) REFERENCES Current_Job_Openings(Job_id)
+);
+
