@@ -1,32 +1,38 @@
+from fastapi import FastAPI, HTTPException
+from typing import List
+import os
 import requests
 
-def get_appslicants(id, numofcandidates):
+app = FastAPI()
+
+@app.get("/getcandidates")
+def get_applicants(id: str, numofcandidates: int):
     url = "https://db-crud-fastapi.onrender.com/get_data_from_applicants_rating_data"
     try:
         response = requests.get(url)
+        response.raise_for_status()  # Raise an error for bad status
         data = response.json()
 
-        print(data)
-        data2 = {}
+        data2 = []
         for i in data:
-            if(i['Id'] == id):
-                data2 = i
-        del data2['Name']
-        del data2['Id']
-        sorted_data2 = dict(sorted(data2.items(), key=lambda item: item[1], reverse=True)[:numofcandidates])
-        print(sorted_data2)
+            data2.append([i['Id'], int(i[str(id)])])
+        sorted_data2 = sorted(data2, key=lambda x: x[1])[:numofcandidates]
+        ids = [i[0] for i in sorted_data2]
 
         url2 = "https://apna-ai-wsfp.onrender.com/getusers"
         response = requests.get(url2)
+        response.raise_for_status()
         users = response.json()
 
-        res = {}
-
+        res = [i for i in users if i['user_id'] in ids]
+        return res
 
     except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
+        raise HTTPException(status_code=response.status_code, detail=str(http_err))
     except Exception as err:
-        print(f"Other error occurred: {err}")
+        raise HTTPException(status_code=500, detail=str(err))
 
-
-get_appslicants(1002, 10)
+if __name__ == "__main__":
+    import uvicorn
+    # port = int(os.environ.get('PORT', 8000))
+    uvicorn.run(app, host='0.0.0.0', port=8000)
