@@ -13,6 +13,15 @@ from Database import supabase
 
 users_bp = Blueprint('users', __name__)
 
+@users_bp.route('/getusers', methods=['GET'])
+def get_users():
+    # Fetch all user data from the 'Users' table in Supabase
+    response = supabase.table('Users').select('*').execute()
+    if response.data:
+        return jsonify(response.data), 200  # Return the data if successful
+    else:
+        return jsonify({"error": "No users found"}), 404
+
 @users_bp.route('/users', methods=['POST'])
 def add_user():
     data = request.json
