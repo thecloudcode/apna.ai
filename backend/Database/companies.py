@@ -3,6 +3,14 @@ from Database import supabase
 
 companies_bp = Blueprint('companies', __name__)
 
+def get_companies():
+    # Fetch all user data from the 'Users' table in Supabase
+    response = supabase.table('Companies').select('*').execute()
+    if response.data:
+        return jsonify(response.data), 200  # Return the data if successful
+    else:
+        return jsonify({"error": "No users found"}), 404
+
 @companies_bp.route('/getcompanies', methods=['GET'])
 def get_users():
     # Fetch all user data from the 'Users' table in Supabase

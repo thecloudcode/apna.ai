@@ -18,7 +18,7 @@ from Database.applications import applications_bp
 from Database.current_job_openings import current_job_openings_bp
 from Database.fact_table import fact_table_bp
 from Database.applicants_rating_data import applicants_rating_data_bp
-from Database.companies import companies_bp
+from Database.companies import companies_bp, get_companies
 
 app = Flask(__name__)
 CORS(app)
@@ -54,6 +54,16 @@ def upload_file():
         return jsonify({"score": score, "parse":parse})
     else:
         return jsonify({"error": "Invalid file format"}), 400
+
+@app.route('/getcompanyrankings', methods=['GET'])
+def getcompanyrankings():
+    response, status_code = get_companies()
+    if status_code == 200:
+        data = response.get_json()
+        sorted_data = sorted(data, key=lambda x: x['job_openings'], reverse=True)[:5]
+        return jsonify(sorted_data), 200
+    else:
+        return response, status_code
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # Get the port from the environment variable
