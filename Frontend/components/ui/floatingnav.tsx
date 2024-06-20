@@ -6,6 +6,11 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
+import { LoginLink, LogoutLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
+import {useKindeBrowserClient} from "@kinde-oss/kinde-auth-nextjs";
+
+// import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
+
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 
@@ -41,6 +46,8 @@ export const FloatingNav = ({
     }
   });
 
+  const {user} = useKindeBrowserClient();
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -72,10 +79,28 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>Login</span>
+        
+        {user?(<button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+          <span><LogoutLink>{user?.given_name}</LogoutLink></span>
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+        </button>):(<><button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-2 py-2 rounded-full">
+          <span><RegisterLink>Register</RegisterLink></span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
         </button>
+        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+          <span><LoginLink>Employer Login</LoginLink></span>
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+        </button>
+        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+          <span><LoginLink>Applicant Login</LoginLink></span>
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+        </button></>)}
+        
+        {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+          <span><LoginLink>Applicant Login</LoginLink></span>
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+        </button> */}
+        
       </motion.div>
     </AnimatePresence>
   );

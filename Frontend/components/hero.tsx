@@ -6,7 +6,7 @@ import { SparklesCore } from "./ui/sparkles";
 import Magicbutton from './ui/magicbutton';
 
 const hero = () => {
-    const words = ["#created-by-Badal", "#a-hiring-website"];
+    const words = ["#a-hiring-website", "sponsered-by-Futurense"];
 
   return (
       <div className="pb-20 pt-36">
@@ -23,7 +23,7 @@ const hero = () => {
             apna.ai
         </h1>
         <div className="h-[40rem] flex justify-center items-center px-4">
-        <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+        <div className="text-2xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
             <FlipWords words={words} ></FlipWords>
         </div>
         </div>
