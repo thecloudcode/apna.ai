@@ -22,7 +22,7 @@ const ChatGPTInterface: React.FC<apnaaiagents> = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('http://127.0.0.1:8000/agents', {
+      const res = await fetch('https://apnaaiagents.onrender.com/agents', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
