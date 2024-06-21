@@ -41,7 +41,7 @@ const people = [
 
 export function AnimatedTooltipPreview() {
   return (
-    <div className="flex flex-row items-center justify-center mb-10 w-full gap-3">
+    <div className="flex flex-row items-center justify-center my-20 w-full gap-3">
         <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 my-10'>
                 CONTRIBUTORS
             </h2>

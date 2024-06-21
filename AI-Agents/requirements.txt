@@ -1,0 +1,11 @@
+huggingface_hub
+python-dotenv
+langchain
+langchain_community
+pydantic
+fastapi
+uvicorn
+crewai
+crewai_tools
+crewai[tools]
+langchain_google_genai

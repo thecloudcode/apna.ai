@@ -13,6 +13,7 @@ export const HoverEffect = ({
     title: string;
     description: string;
     link: string;
+    imageUrl: string; // Add imageUrl to the type definition
   }[];
   className?: string;
 }) => {
@@ -51,8 +52,8 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+          <CardTitle imageUrl={item.imageUrl}>{item.title}</CardTitle>
+          <CardDescription>{item.description}</CardDescription>
           </Card>
         </Link>
       ))}
@@ -83,14 +84,17 @@ export const Card = ({
 export const CardTitle = ({
   className,
   children,
+  imageUrl,
 }: {
   className?: string;
   children: React.ReactNode;
+  imageUrl: string;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
-      {children}
-    </h4>
+    <div className={cn("flex items-center justify-items-center justify-center", className)}>
+      {/* <img src={imageUrl} alt="icon" className="w-10 h-6 mr-2" />  */}
+      <h4 className="text-zinc-100 font-bold tracking-wide mt-4">{children}</h4>
+    </div>
   );
 };
 export const CardDescription = ({

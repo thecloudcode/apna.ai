@@ -4,6 +4,8 @@ import { TextGenerateEffect } from './ui/text-generate'
 import { FlipWords } from './ui/flip-words'
 import { SparklesCore } from "./ui/sparkles";
 import Magicbutton from './ui/magicbutton';
+import { HoverBorderGradient } from './ui/hover-border-gradient';
+import Link from 'next/link';
 
 const hero = () => {
     const words = ["#a-hiring-website", "sponsered-by-Futurense"];
@@ -55,10 +57,23 @@ const hero = () => {
         <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
             
       </p>
+      
+
       <div className='flex justify-center my-10'>
         <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex:flex-col items-center my-10'>
+        <div className="flex justify-center text-center my-20">
+        <a href='/agentschat'>
+      <HoverBorderGradient
+        containerClassName="rounded-full"
+        as="button"
+        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-10"
+      >
+        <span className='text-xl'><b>apna.ai agents</b></span>
+      </HoverBorderGradient>
+      </a>
+      </div>
             <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 my-10'>
-                TRY SOME OF OUR FEATURES
+                TRY SOME OF OUR OTHER FEATURES
             </h2>
 
             {/* <TextGenerateEffect
@@ -81,11 +96,10 @@ const hero = () => {
 
             </div>
         </div>
-        
+        </div>
       </div>
       
     </div>
-      </div>
       
   )
 }
