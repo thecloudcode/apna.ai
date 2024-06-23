@@ -13,7 +13,7 @@ import { BackgroundBeams } from '@/components/ui/backgroundbeams';
 
 interface apnaaiagents {}
 
-const ChatGPTInterface: React.FC<apnaaiagents> = () => {
+const agentschat: React.FC<apnaaiagents> = () => {
   const [input, setInput] = useState('');
   const [response, setResponse] = useState<any>(null);
   const [loading, setLoading] = useState(false);
@@ -104,4 +104,4 @@ const ChatGPTInterface: React.FC<apnaaiagents> = () => {
   );
 };
 
-export default ChatGPTInterface;
+export default agentschat;

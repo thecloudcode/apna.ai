@@ -1,0 +1,100 @@
+company_id,name,website,job_openings,applicants_taken,job_apply_counts
+1,Doyle Inc,http://www.price.net/,24,2,382
+2,"Watts, Molina and Mooney",https://www.hancock.biz/,44,16,58
+3,Jones-Rodriguez,http://walton.info/,16,12,210
+4,"Shaw, Hart and Adams",https://smith-rodriguez.org/,19,19,225
+5,White Inc,https://davis.com/,31,15,467
+6,Stewart PLC,https://www.spencer.org/,29,1,268
+7,"Black, Smith and Matthews",http://www.roman.org/,26,18,296
+8,"Brown, Lewis and Wallace",http://www.cook.com/,12,12,494
+9,"Lopez, Day and George",https://www.dixon.info/,7,6,92
+10,Hudson and Sons,http://www.spencer-ingram.com/,28,20,481
+11,Garcia-Johnson,http://hancock-cooper.org/,32,9,213
+12,Zimmerman Ltd,https://www.thompson.com/,2,4,254
+13,James-Dawson,https://williams-peterson.net/,3,6,96
+14,Torres-Washington,https://oliver.net/,37,6,263
+15,"Stone, Cooper and Fletcher",https://davis.biz/,21,17,468
+16,"Hill, Gibson and Gordon",https://moore.net/,49,9,346
+17,Blair-Durham,https://flowers.org/,8,20,88
+18,"Hughes, May and Bradley",https://cohen.com/,30,16,165
+19,"Williams, Lee and Lin",https://hall.com/,17,7,472
+20,Smith-Barton,http://smith.net/,50,10,165
+21,"Roberts, Lambert and Atkinson",https://www.perez.net/,49,15,219
+22,Salas-Olsen,https://briggs.com/,41,11,265
+23,"Little, Torres and Watson",https://potter.com/,32,3,182
+24,Myers-Dixon,http://www.sanders-hanson.com/,34,8,152
+25,Moran-Vaughn,http://www.robertson.com/,16,3,123
+26,"Kim, Campos and Williams",https://douglas-byrd.info/,13,4,198
+27,Brown and Sons,https://hawkins.com/,39,15,126
+28,Perez-Callahan,http://martin-rodriguez.com/,50,7,105
+29,Parker PLC,http://taylor.com/,41,18,186
+30,"Ingram, Vasquez and Price",http://www.mejia.net/,37,3,198
+31,Anderson Ltd,https://davidson-davies.com/,24,3,41
+32,Mcdaniel-Fisher,http://www.morgan.com/,38,16,234
+33,Williams-Lynch,https://www.smith.info/,43,15,142
+34,"Mckinney, White and Jenkins",http://www.benitez-figueroa.com/,14,13,120
+35,Shepherd Inc,http://hamilton-beck.com/,5,18,137
+36,Cox Ltd,https://cuevas-cochran.com/,2,5,105
+37,"Duncan, Brewer and Palmer",http://gibbs-mclaughlin.org/,48,5,313
+38,"Pineda, Russell and Adams",https://jones.com/,19,11,287
+39,"Chapman, Taylor and Elliott",http://www.shaw.com/,18,5,262
+40,Bush LLC,https://www.montoya.org/,30,6,385
+41,"Hutchinson, Greene and Jenkins",http://www.peters-watson.net/,33,5,346
+42,Benson-Landry,https://www.cabrera.com/,13,5,107
+43,Lang-Harrison,http://lee-hughes.com/,35,9,294
+44,Gibson Inc,http://www.mercado.com/,22,5,14
+45,Bean-Osborne,http://www.morris.com/,8,2,199
+46,Garcia-Pratt,https://www.meyers-sims.com/,50,4,340
+47,Whitney-Alvarado,http://www.lopez.biz/,13,1,289
+48,Walters-Humphrey,https://www.carney.com/,29,16,228
+49,Jennings-Wilson,https://perez-ramirez.net/,23,5,285
+50,"White, Murphy and Roth",https://perez-lowery.org/,37,19,94
+51,Williams-Matthews,https://daniel.org/,1,4,133
+52,Franklin-Walker,http://www.maxwell.com/,49,19,231
+53,Long-Smith,http://www.parks.info/,17,20,88
+54,Jordan PLC,http://mckee-brooks.org/,12,6,170
+55,Johnson and Sons,https://www.middleton.com/,20,17,81
+56,"Lucas, Gomez and Ortiz",http://www.ramirez.com/,2,15,394
+57,"Juarez, Riley and Martinez",http://www.ryan-dickerson.org/,33,14,319
+58,Braun-Garrison,http://hinton-gregory.com/,3,7,74
+59,"Heath, Hale and Bell",https://lawson-bell.com/,4,4,449
+60,Salazar-Chase,http://lee.com/,37,20,295
+61,Dunn-Hughes,https://www.henson.com/,6,3,428
+62,Mcconnell-Perez,https://www.hoffman-washington.net/,38,14,219
+63,Andrews-Moore,https://bailey.net/,25,4,419
+64,"Grant, Cooper and Williams",http://rodriguez.com/,26,16,141
+65,Howard-Nguyen,http://hamilton-crawford.com/,35,2,301
+66,Sutton-Bridges,http://estes-irwin.info/,14,20,183
+67,Warner Ltd,https://www.richards.com/,38,19,10
+68,"Zimmerman, Cook and Hanson",https://www.marks-shannon.net/,47,17,12
+69,Sherman-Campbell,http://cooper.com/,11,14,297
+70,Palmer PLC,http://bartlett.com/,18,10,460
+71,Davis Group,https://barron.net/,17,17,17
+72,Ruiz-Cruz,http://www.thomas-robertson.com/,16,16,444
+73,Ramirez Inc,https://www.davis.net/,45,5,497
+74,"Lawson, White and Smith",http://www.jones.net/,49,4,440
+75,Scott-Jones,https://www.blackwell.net/,49,16,309
+76,"Woods, Friedman and Cannon",https://www.chambers.com/,42,7,80
+77,Lopez-Adams,https://www.johnson.com/,8,5,37
+78,"Davis, Sanchez and Allen",https://www.savage-phillips.com/,39,14,100
+79,Barnett LLC,https://www.carter-cruz.com/,24,11,415
+80,"Murphy, Walker and Sellers",http://www.garner.com/,12,14,344
+81,"Bender, Bell and Garrison",http://www.benitez.com/,12,3,434
+82,Fields-Kim,http://www.richardson-wolfe.com/,24,11,327
+83,"Davidson, Price and Mueller",https://www.williams.org/,26,8,410
+84,Walton Group,https://rodriguez.biz/,13,15,203
+85,Alvarez and Sons,https://moore.com/,23,12,159
+86,"Curtis, Brown and Mckay",https://www.bennett-lin.com/,29,1,325
+87,Beard Group,https://johnson-jones.org/,32,9,324
+88,Fletcher-Lopez,http://www.anderson.com/,1,8,383
+89,Galvan Inc,http://www.morgan-scott.com/,1,19,434
+90,"Stewart, Johnson and Rich",http://owens.biz/,50,4,22
+91,"Kramer, Moran and Richmond",https://taylor.com/,38,4,290
+92,Wall LLC,https://miller-carter.biz/,29,12,489
+93,Malone-Roberts,https://perez-jones.org/,20,13,47
+94,Rodriguez-Copeland,https://www.hill-holt.biz/,43,6,229
+95,"Hardy, Murray and Humphrey",http://solis.net/,24,4,200
+96,"Bowman, Lewis and Sullivan",https://www.brooks.com/,17,18,243
+97,"Rodriguez, Nguyen and Petty",http://ortiz-coleman.org/,18,14,279
+98,Matthews-Vaughn,https://warren.net/,1,10,52
+99,"Dillon, Baker and Schwartz",http://jones.net/,32,17,415

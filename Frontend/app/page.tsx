@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Hero from "@/components/hero";
 // import { FloatingNav } from "@/components/ui/floatingnav";
 import { NavbarDemo } from "./components/navbar";
@@ -19,7 +19,7 @@ export default function Home(){
 
         <Hero/>
         <AnimatedTooltipPreview/>
-        <TableDemo/>
+        {/* <TableDemo/> */}
         <CardHoverEffectDemo/>
         <InfiniteMovingCardsDemo/>
       </div>
