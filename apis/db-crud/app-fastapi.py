@@ -4,10 +4,18 @@ from supabase import create_client, Client
 import os
 from dotenv import load_dotenv
 import logging
+from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins, change this to specific domains in production
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allow all headers
+)
 logging.basicConfig(level=logging.INFO)
 
 url: str = os.environ.get("SUPABASE_URL")
