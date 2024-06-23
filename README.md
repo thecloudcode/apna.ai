@@ -1,4 +1,9 @@
-# Project Overview
+<h3 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Project+Overview....;Let+Gooooo...+!&center=true&size=35">
+  </a>
+</h3>
+
 
 ## Database Overview
 
