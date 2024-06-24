@@ -106,7 +106,8 @@ erDiagram
 
 
 
-![Screenshot 2024-06-16 194616](https://github.com/thecloudcode/apna.ai/assets/114615639/6b712704-0e30-4fdf-94a1-0d230a2fc1d2)
+![Data Model 2](https://github.com/thecloudcode/apna.ai/assets/114615639/3a246daa-2725-4aa6-b844-dc2fe6c1b736)
+![Screenshot 2024-06-19 213659](https://github.com/thecloudcode/apna.ai/assets/114615639/73f816d1-d3d6-4cd3-ad7d-d676f0299142)
 
 
 
