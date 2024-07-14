@@ -5,8 +5,7 @@ from supabase import create_client, Client
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)  # Set logging level as needed
 
-app = Flask(_name_)
-
+app = Flask(__name__)
 # Define Supabase configuration
 SUPABASE_URL = "https://maogxyhapksyshaleqie.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1hb2d4eWhhcGtzeXNoYWxlcWllIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTgxMjU4ODYsImV4cCI6MjAzMzcwMTg4Nn0.yObHYXoTXGgz5WcLpacUT21LbCBRpv8q7uprLf8eE48" 
@@ -15,7 +14,7 @@ SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Blueprint for activity scorer
-activity_scorer_bp = Blueprint('activity_scorer', _name_)
+activity_scorer_bp = Blueprint('activity_scorer', __name__)
 
 @activity_scorer_bp.route('/activity_scorer', methods=['POST'])
 def add_activity_scorer():
@@ -54,5 +53,5 @@ def update_activity_scorer(user_id):
 
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)

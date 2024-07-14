@@ -5,7 +5,7 @@ from supabase import create_client, Client
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)  # Set logging level as needed
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Define Supabase configuration
 SUPABASE_URL = "https://maogxyhapksyshaleqie.supabase.co"
@@ -15,7 +15,7 @@ SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Blueprint for chatbot_prompts
-chatbot_prompts_bp = Blueprint('chatbot_prompts', _name_)
+chatbot_prompts_bp = Blueprint('chatbot_prompts', __name__)
 
 @chatbot_prompts_bp.route('/chatbot_prompts', methods=['POST'])
 def add_chatbot_prompt():
@@ -55,5 +55,5 @@ def update_chatbot_prompt(id):
 # Register the blueprint
 app.register_blueprint(chatbot_prompts_bp)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
