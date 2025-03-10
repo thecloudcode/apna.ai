@@ -11,6 +11,7 @@ from langchain import HuggingFaceHub
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationBufferMemory
 from fastapi.middleware.cors import CORSMiddleware
+from crew import result
 
 
 load_dotenv()
