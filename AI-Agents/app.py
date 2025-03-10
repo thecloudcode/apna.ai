@@ -10,7 +10,6 @@ from pydantic import BaseModel
 from langchain import HuggingFaceHub
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationBufferMemory
-from crew import result
 from fastapi.middleware.cors import CORSMiddleware
 
 
